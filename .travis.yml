@@ -3,15 +3,26 @@ language: c
 compiler:
   - gcc
 
-arch:
-  - amd64
-  - arm64
-  - ppc64le
-  - s390x
+#arch:
+#  - amd64
+#  - arm64
+#  - ppc64le
+#  - s390x
 
-os:
-  - linux
-dist: bionic
+#os:
+#  - linux
+#dist: bionic
+
+matrix:
+  include:
+    - arch: amd64
+      dist: xenial
+    - arch: ppc64le
+      dist: bionic
+    - arch: arm64
+      dist: bionic
+    - arch: s390x
+      dist: bionic
 
 addons:
   apt:
