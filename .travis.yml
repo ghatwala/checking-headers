@@ -23,6 +23,8 @@ matrix:
       dist: bionic
     - arch: s390x
       dist: bionic
+    - arch: ppc64le
+      dist: xenial
 
 addons:
   apt:
